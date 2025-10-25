@@ -1,65 +1,106 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
+      {/* Header */}
+      <header className="border-b border-emerald-100 bg-white/80 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <span className="text-3xl">🍀</span>
+              <h1 className="text-2xl font-bold text-emerald-800">소확행</h1>
+            </div>
+            <nav className="flex gap-4">
+              <button className="rounded-full bg-emerald-600 px-6 py-2 text-sm font-medium text-white transition hover:bg-emerald-700">
+                시작하기
+              </button>
+            </nav>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Hero Section */}
+      <main className="container mx-auto px-4 py-20">
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="mb-6 text-5xl font-bold text-emerald-900">
+            소소한 확실한 행복
+          </h2>
+          <p className="mb-4 text-xl text-emerald-700">
+            자극적인 SNS와 달리, 일상 속 작은 행복을 기록하고 공유하세요
+          </p>
+          <p className="mb-12 text-lg text-emerald-600">
+            타인과의 비교가 아닌, 나만의 행복에 집중하는 공간입니다
+          </p>
+
+          {/* Feature Cards */}
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            <div className="rounded-2xl bg-white p-8 shadow-lg transition hover:shadow-xl">
+              <div className="mb-4 text-4xl">📅</div>
+              <h3 className="mb-3 text-xl font-bold text-emerald-800">
+                나만의 행복 캘린더
+              </h3>
+              <p className="text-emerald-600">
+                자극적인 피드 대신 내가 쌓아온 행복한 순간들을 캘린더로 확인하세요
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-white p-8 shadow-lg transition hover:shadow-xl">
+              <div className="mb-4 text-4xl">🍀</div>
+              <h3 className="mb-3 text-xl font-bold text-emerald-800">
+                네잎클로버 평가
+              </h3>
+              <p className="text-emerald-600">
+                하트 대신 네잎클로버로 행복의 정도를 표현하고 공유하세요
+              </p>
+            </div>
+
+            <div className="rounded-2xl bg-white p-8 shadow-lg transition hover:shadow-xl">
+              <div className="mb-4 text-4xl">🔍</div>
+              <h3 className="mb-3 text-xl font-bold text-emerald-800">
+                새로운 행복 발견
+              </h3>
+              <p className="text-emerald-600">
+                해시태그로 다른 사람들의 소확행을 검색하고 나만의 행복을 찾아보세요
+              </p>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 rounded-3xl bg-gradient-to-r from-emerald-500 to-teal-500 p-12 text-white">
+            <h3 className="mb-4 text-3xl font-bold">
+              오늘의 소확행을 시작해보세요
+            </h3>
+            <p className="mb-8 text-lg opacity-90">
+              작은 행복이 모여 큰 변화를 만듭니다
+            </p>
+            <button className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50">
+              지금 시작하기
+            </button>
+          </div>
+
+          {/* Stats Section */}
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            <div className="rounded-xl bg-white/60 p-6 backdrop-blur-sm">
+              <div className="text-3xl font-bold text-emerald-700">1,234</div>
+              <div className="mt-2 text-emerald-600">공유된 소확행</div>
+            </div>
+            <div className="rounded-xl bg-white/60 p-6 backdrop-blur-sm">
+              <div className="text-3xl font-bold text-emerald-700">567</div>
+              <div className="mt-2 text-emerald-600">행복한 사용자</div>
+            </div>
+            <div className="rounded-xl bg-white/60 p-6 backdrop-blur-sm">
+              <div className="text-3xl font-bold text-emerald-700">89%</div>
+              <div className="mt-2 text-emerald-600">만족도</div>
+            </div>
+          </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-emerald-100 bg-white/80 py-8">
+        <div className="container mx-auto px-4 text-center text-emerald-600">
+          <p>© 2025 소확행. 모든 작은 행복을 응원합니다.</p>
+        </div>
+      </footer>
     </div>
   );
 }
