@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50">
@@ -10,9 +12,9 @@ export default function Home() {
               <h1 className="text-2xl font-bold text-emerald-800">소확행</h1>
             </div>
             <nav className="flex gap-4">
-              <button className="rounded-full bg-emerald-600 px-6 py-2 text-sm font-medium text-white transition hover:bg-emerald-700">
+              <Link href="/calendar" className="rounded-full bg-emerald-600 px-6 py-2 text-sm font-medium text-white transition hover:bg-emerald-700">
                 시작하기
-              </button>
+              </Link>
             </nav>
           </div>
         </div>
@@ -72,9 +74,9 @@ export default function Home() {
             <p className="mb-8 text-lg opacity-90">
               작은 행복이 모여 큰 변화를 만듭니다
             </p>
-            <button className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50">
+            <Link href="/calendar" className="inline-block rounded-full bg-white px-8 py-3 text-lg font-semibold text-emerald-700 transition hover:bg-emerald-50 shadow-lg">
               지금 시작하기
-            </button>
+            </Link>
           </div>
 
           {/* Stats Section */}
